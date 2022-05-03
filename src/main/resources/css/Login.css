@@ -1,0 +1,18 @@
+
+
+/* ------------ LOGIN VIEW STYLES --------------- */
+@import "application.css";
+
+.login-close{
+	-fx-background-color:rgba(0,0,0,0);
+}
+
+.login-title{
+	-fx-text-fill:-fx-black;
+}
+
+.login-btn{
+	-fx-background-color:-fx-primary;
+	-fx-border:none;
+	-fx-text-fill:#FFF;
+}

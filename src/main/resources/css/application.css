@@ -1,0 +1,45 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../Assets/fonts/Nunito-Regular.ttf');
+}
+
+
+*{
+	-fx-font-family:'Nunito';
+	-fx-primary:#0F85F5;
+	-fx-secondary:#3EF73B;
+	-fx-v:#963BF7;
+	-fx-black:#3D3D3D;
+	-fx-grey:#9d9d9d;
+}
+
+.bgWhite{
+	-fx-background-color:#fff;
+}
+.window-shadow{
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+	-fx-border-radius:5;
+	-fx-background-radius:5;
+}
+
+.h1{
+	-fx-font-size:20;
+}
+
+.h2{
+	-fx-font-size:18;
+}
+
+.h3{
+	-fx-font-size:16;
+}
+
+.h4{
+	-fx-font-size:14;
+}
+
+.h5{
+	-fx-font-size:12;
+}
