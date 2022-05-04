@@ -22,11 +22,11 @@
    <children>
       <AnchorPane prefHeight="40.0" styleClass="window-bar">
          <children>
-            <Button layoutX="1237.0" layoutY="5.0" mnemonicParsing="false" styleClass="window-btn">
+            <Button layoutX="1237.0" layoutY="2.0" mnemonicParsing="false" prefHeight="40.0" styleClass="window-btn">
                <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../Assets/icons/icons8_Close_64px_2.png" />
+                        <Image url="@../Assets/icons/windClose.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
@@ -34,15 +34,15 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="1154.0" layoutY="6.0" mnemonicParsing="false" styleClass="window-btn">
+            <Button layoutX="1154.0" layoutY="1.0" mnemonicParsing="false" prefHeight="40.0" styleClass="window-btn">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../Assets/icons/icons8_subtract_48px_1.png" />
+                        <Image url="@../Assets/icons/minimize.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button layoutX="1196.0" layoutY="6.0" mnemonicParsing="false" styleClass="window-btn">
+            <Button layoutX="1195.0" layoutY="2.0" mnemonicParsing="false" prefHeight="40.0" styleClass="window-btn">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -61,6 +61,15 @@
                   <Image url="@../Assets/img/logo.png" />
                </image>
             </ImageView>
+            <Button layoutX="1113.0" layoutY="2.0" mnemonicParsing="false" prefHeight="40.0" styleClass="window-btn">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assets/icons/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
       <GridPane prefHeight="656.0" prefWidth="1280.0">
