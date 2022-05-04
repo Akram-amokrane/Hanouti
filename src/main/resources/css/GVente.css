@@ -1,0 +1,65 @@
+@import "application.css";
+
+.gvent-field{
+    -fx-background-color: -fx-lightGrey;
+    -fx-text-fill: -fx-grey;
+}
+
+.total-bord{
+    -fx-background-color: rgba(15,133,245,0.2);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+.total-label{
+    -fx-text-fill: -fx-grey;
+}
+.total-price{
+    -fx-text-fill: -fx-primary;
+}
+
+.product-check{
+    -fx-background-color: rgba(62,247,59,0.2);
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.ticket-print{
+    -fx-background-color: rgba(150,59,247,0.2);
+    -fx-border-color: -fx-v;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.product-table{
+    -fx-background-color: #fff;
+}
+.table-column {
+    -fx-background-color: #fff;
+    -fx-font-size: 12;
+}
+.table-column .label {
+    -fx-text-alignment: left;
+    -fx-alignment: center-right;
+    -fx-text-fill: -fx-grey;
+}
+.produit-column >.label{
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;
+}
+.valide-btn{
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: #fff;
+}
+.init-btn{
+    -fx-background-color: #fff;
+    -fx-text-fill: -fx-primary;
+    -fx-border-color: -fx-primary;
+    -fx-border-width: 1;
+}
+
+.listview-list{
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+

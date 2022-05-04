@@ -13,8 +13,9 @@
 	-fx-v:#963BF7;
 	-fx-black:#3D3D3D;
 	-fx-grey:#9d9d9d;
+	-fx-lightGrey:#E9E9E9;
 }
-
+/* WINDOW */
 .bgWhite{
 	-fx-background-color:#fff;
 }
@@ -23,7 +24,35 @@
 	-fx-border-radius:5;
 	-fx-background-radius:5;
 }
+/* WINDOW BAR */
+.window-bar{
+	-fx-effect: dropshadow(gaussian, #CCC, 100, 0, 0, -30);
+	-fx-background-color: #fff;
+}
+.window-btn{
+	-fx-background-color: transparent;
+	-fx-cursor: hand;
+}
 
+.window-btn:hover{
+	-fx-background-color: #DDD;
+}
+/* BTN */
+.btn{
+	-fx-background-radius: 5;
+	-fx-border-radius: 5;
+	-fx-cursor: hand;
+}
+.btn:hover{
+	-fx-scale-y: 1.05;
+	-fx-scale-x: 1.05;
+}
+.btn:disabled{
+	-fx-background-color: #DDD;
+	-fx-text-fill: -fx-grey;
+}
+
+/* App Font size*/
 .h1{
 	-fx-font-size:20;
 }

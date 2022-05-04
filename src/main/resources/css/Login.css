@@ -15,4 +15,23 @@
 	-fx-background-color:-fx-primary;
 	-fx-border:none;
 	-fx-text-fill:#FFF;
+	-fx-cursor: hand;
+}
+
+.login-btn:hover{
+	-fx-scale-x: 1.05;
+	-fx-scale-y: 1.05;
+}
+
+.field-title{
+	-fx-text-fill: -fx-grey;
+}
+
+.login-field{
+	-fx-text-fill: -fx-black;
+}
+
+.login-field:focused{
+	-fx-border-color: -fx-primary;
+	-fx-text-fill: -fx-primary;
 }
