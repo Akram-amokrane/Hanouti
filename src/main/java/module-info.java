@@ -11,5 +11,7 @@ module dz.akram.hanouti {
     opens dz.hanouti to javafx.fxml;
     exports dz.hanouti.View;
     opens dz.hanouti.View to javafx.fxml;
+    exports dz.hanouti.Controller;
+    opens dz.hanouti.Controller to javafx.fxml;
     exports dz.hanouti;
 }
