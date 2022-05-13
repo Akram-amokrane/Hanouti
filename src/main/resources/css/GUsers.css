@@ -1,0 +1,87 @@
+@import "application.css";
+
+.init-caisse-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-primary;
+    -fx-fill:-fx-primary;
+    -fx-cursor: hand;
+}
+
+.init-caisse-btn:hover{
+    -fx-background-color: -fx-lightgrey;
+}
+
+.gusers-field{
+    -fx-background-color: -fx-lightGrey;
+}
+.gusers-field:focused{
+    -fx-background-color: -fx-lightGrey;
+    -fx-border-color: -fx-primary;
+    -fx-border-width: 1;
+    -fx-text-fill: -fx-primary;
+}
+.toggle-group{
+    -fx-border-color: linear-gradient(to right, #0F85F5, #963BF7);
+    -fx-border-width: 2;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.role-toggle{
+    -fx-background-color: #fff;
+    -fx-cursor: hand;
+}
+.role-toggle:selected{
+    -fx-background-color: linear-gradient(to right, #0F85F5, #963BF7);
+    -fx-text-fill: #fff;
+}
+
+.gusers-btns{
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+.gusers-btns:hover{
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.edit-btn{
+    -fx-background-color: rgba(15,133,245,0.2);
+    -fx-text-fill: -fx-primary;
+    -fx-fill:-fx-primary;
+}
+
+.add-btn{
+    -fx-background-color: rgba(62,247,59,0.2);
+    -fx-text-fill: -fx-secondary;
+    -fx-fill:-fx-secondary;
+}
+
+.search-btn{
+    -fx-background-color: rgba(150,59,247,0.2);
+    -fx-text-fill: -fx-v;
+    -fx-fill:-fx-v;
+}
+
+.gusers-table{
+    -fx-background-color: #fff;
+}
+.table-column {
+    -fx-background-color: #fff;
+    -fx-font-size: 12;
+}
+.table-column .label {
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;
+    -fx-text-fill: -fx-grey;
+}
+.gusers-column >.label{
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;
+}
+
+
+.gusers-field-error{
+    -fx-text-fill: #FF4747;
+    -fx-fill:#FF4747;
+}

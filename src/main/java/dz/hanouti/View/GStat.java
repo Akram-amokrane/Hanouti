@@ -1,27 +1,25 @@
 package dz.hanouti.View;
 
-import dz.hanouti.Controller.GVenteController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class GVente {
+public class GStat {
 
-    public GVente(Stage stage){
+    public GStat(Stage stage){
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(GVente.class.getResource("/fxml/GVente.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(GVente.class.getResource("/fxml/GStat.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            scene.getStylesheets().add(getClass().getResource("/css/GVente.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/css/GStat.css").toExternalForm());
             scene.setFill(Color.TRANSPARENT);
             stage.initStyle(StageStyle.TRANSPARENT);
             stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
-        } catch (Exception e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
     }
-
 }

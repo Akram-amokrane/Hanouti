@@ -32,10 +32,15 @@
 .window-btn{
 	-fx-background-color: transparent;
 	-fx-cursor: hand;
+	-fx-background-radius: 0;
+	-fx-border-radius: 0;
 }
 
 .window-btn:hover{
 	-fx-background-color: #DDD;
+}
+.window-close-btn:hover{
+	-fx-background-color: #f66;
 }
 /* BTN */
 .btn{

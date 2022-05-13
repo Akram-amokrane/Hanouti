@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox prefHeight="700.0" prefWidth="1280.0" styleClass="bgWhite" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dz.hanouti.Controller.GUsersController">
+    <children>
+        <BorderPane maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="28.0" prefWidth="1280.0" styleClass="window-bar">
+            <left>
+                <ImageView fitHeight="25.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                    <image>
+                        <Image url="@../Assets/img/logo.png" />
+                    </image>
+                </ImageView>
+            </left>
+            <right>
+                <AnchorPane maxHeight="40.0" maxWidth="164.0" prefHeight="27.0" prefWidth="134.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="closeBtn" accessibleHelp="Quitter" accessibleText="Quitter" layoutX="143.0" mnemonicParsing="false" onAction="#windowActionEvent" prefHeight="28.0" prefWidth="25.0">
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Assets/icons/windClose.png" />
+                                    </image>
+                                    <viewport>
+                                        <Rectangle2D />
+                                    </viewport>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                            </padding>
+                            <styleClass>
+                                <String fx:value="window-btn" />
+                                <String fx:value="window-close-btn" />
+                            </styleClass>
+                            <tooltip>
+                                <Tooltip text="Quitter" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="minimBtn" layoutX="91.0" mnemonicParsing="false" onAction="#windowActionEvent" prefHeight="28.0" prefWidth="25.0" styleClass="window-btn">
+                            <graphic>
+                                <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Assets/icons/minimize.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                            </padding>
+                            <tooltip>
+                                <Tooltip text="Réduire" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="maximBtn" layoutX="117.0" mnemonicParsing="false" onAction="#windowActionEvent" prefHeight="28.0" prefWidth="25.0" styleClass="window-btn">
+                            <graphic>
+                                <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Assets/icons/maximize.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                            </padding>
+                            <tooltip>
+                                <Tooltip text="Agrandire" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="logoutBtn" layoutX="59.0" mnemonicParsing="false" onAction="#windowActionEvent" prefHeight="28.0" prefWidth="25.0" styleClass="window-btn">
+                            <graphic>
+                                <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Assets/icons/logout.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                            </padding>
+                            <tooltip>
+                                <Tooltip text="Deconnecter" />
+                            </tooltip>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </right>
+            <center>
+                <Label fx:id="titleLabel" alignment="CENTER" maxHeight="-Infinity" prefHeight="25.0" prefWidth="400.0" text="Window Title" BorderPane.alignment="CENTER">
+                    <styleClass>
+                        <String fx:value="window-title" />
+                        <String fx:value="h3" />
+                    </styleClass>
+                </Label>
+            </center>
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+        </BorderPane>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" styleClass="bgWhite">
+         <children>
+            <Button mnemonicParsing="false" text="Initialiser la caisse">
+               <graphic>
+                  <FontIcon iconLiteral="las-money-bill-alt" iconSize="24" styleClass="init-caisse-btn" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="init-caisse-btn" />
+                  <String fx:value="h4" />
+               </styleClass>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="16.0" />
+         </padding>
+      </HBox>
+      <GridPane prefHeight="673.0" prefWidth="1280.0" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="866.6666870117188" minWidth="10.0" prefWidth="836.3333740234375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="632.0" minWidth="10.0" prefWidth="443.6666259765625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.columnIndex="1">
+              <columnConstraints>
+                <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label layoutX="-2.0" layoutY="-4.0" prefHeight="71.0" prefWidth="444.0" styleClass="h1" text="Informations">
+                           <padding>
+                              <Insets left="16.0" />
+                           </padding>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <VBox prefHeight="90.0" prefWidth="444.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                         <TextField fx:id="userId" editable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="383.0" promptText="N&quot;" styleClass="gusers-field" />
+                        <Label fx:id="userIdError" layoutX="26.0" layoutY="66.0" prefHeight="17.0" prefWidth="411.0" styleClass="gusers-field-error" text=" ereur" visible="false">
+                           <graphic>
+                              <FontIcon iconLiteral="las-exclamation-circle" styleClass="gusers-field-error" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                              <TextField fx:id="userLastName" layoutX="30.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="383.0" promptText="Nom" styleClass="gusers-field" />
+                        <Label fx:id="userNameError" prefHeight="17.0" prefWidth="411.0" styleClass="gusers-field-error" text=" ereur" visible="false">
+                           <graphic>
+                              <FontIcon iconLiteral="las-exclamation-circle" styleClass="gusers-field-error" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <TextField fx:id="userName" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="383.0" promptText="Prenom" styleClass="gusers-field" />
+                        <Label fx:id="userFNameError" prefHeight="17.0" prefWidth="411.0" styleClass="gusers-field-error" text=" ereur" visible="false">
+                           <graphic>
+                              <FontIcon iconLiteral="las-exclamation-circle" styleClass="gusers-field-error" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <TextField fx:id="userAdress" layoutX="30.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="383.0" promptText="Adresse" styleClass="gusers-field" />
+                        <Label fx:id="userAdresseError" prefHeight="17.0" prefWidth="411.0" styleClass="gusers-field-error" text=" ereur" visible="false">
+                           <graphic>
+                              <FontIcon iconLiteral="las-exclamation-circle" styleClass="gusers-field-error" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <TextField fx:id="userTel" layoutX="31.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="383.0" promptText="Telephone" styleClass="gusers-field" />
+                        <Label fx:id="userTelError" prefHeight="17.0" prefWidth="411.0" styleClass="gusers-field-error" text=" ereur" visible="false">
+                           <graphic>
+                              <FontIcon iconLiteral="las-exclamation-circle" styleClass="gusers-field-error" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                        <TextField fx:id="userPwd" layoutX="29.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="383.0" promptText="Mot de passe" styleClass="gusers-field" />
+                        <Label fx:id="userPwdError" prefHeight="17.0" prefWidth="411.0" styleClass="gusers-field-error" text=" ereur" visible="false">
+                           <graphic>
+                              <FontIcon iconLiteral="las-exclamation-circle" styleClass="gusers-field-error" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <children>
+                        <TextField fx:id="userCPwd" layoutX="28.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="383.0" promptText="Confirmer le mot de passe" styleClass="gusers-field" />
+                        <Label fx:id="userCPwdError" prefHeight="17.0" prefWidth="411.0" styleClass="gusers-field-error" text=" ereur" visible="false">
+                           <graphic>
+                              <FontIcon iconLiteral="las-exclamation-circle" styleClass="gusers-field-error" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="9">
+
+                                 <children>
+                        <AnchorPane styleClass="toggle-group">
+                           <children>
+                              <ToggleButton fx:id="userRoleC" layoutX="3.0" layoutY="4.0" mnemonicParsing="false" onAction="#ToggleClick" prefHeight="41.0" prefWidth="206.0" selected="true" text="Caissier">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Role" />
+                                 </toggleGroup>
+                                 <styleClass>
+                                    <String fx:value="role-toggle" />
+                                    <String fx:value="h3" />
+                                 </styleClass>
+                              </ToggleButton>
+                              <ToggleButton fx:id="userRoleM" layoutX="206.0" layoutY="4.0" mnemonicParsing="false" onAction="#ToggleClick" prefHeight="41.0" prefWidth="206.0" selected="true" text="Manager" toggleGroup="$Role">
+                                 <styleClass>
+                                    <String fx:value="role-toggle" />
+                                    <String fx:value="h3" />
+                                 </styleClass>
+                              </ToggleButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <children>
+                        <GridPane prefHeight="63.0" prefWidth="444.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" text="Modifier">
+                                 <padding>
+                                    <Insets right="20.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontIcon iconLiteral="las-pen" iconSize="24" styleClass="edit-btn" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="h2" />
+                                    <String fx:value="gusers-btns" />
+                                    <String fx:value="edit-btn" />
+                                 </styleClass>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="50.0" GridPane.columnIndex="2">
+                                 <graphic>
+                                    <FontIcon iconLiteral="las-search" iconSize="24" styleClass="search-btn" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="gusers-btns" />
+                                    <String fx:value="search-btn" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="insertUserBtn" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#InsertNewUser" prefHeight="40.0" prefWidth="130.0" text="Ajouter" GridPane.columnIndex="1">
+                                 <padding>
+                                    <Insets right="20.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontIcon iconLiteral="las-plus-circle" iconSize="24" styleClass="add-btn" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="h2" />
+                                    <String fx:value="gusers-btns" />
+                                    <String fx:value="add-btn" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets left="16.0" right="16.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="84.0" prefWidth="446.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <TextField fx:id="user_name" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="383.0" promptText="Nom d'utilisation" styleClass="gusers-field" />
+                        <Label fx:id="userNError" layoutX="26.0" layoutY="151.0" prefHeight="17.0" prefWidth="411.0" styleClass="gusers-field-error" text=" ereur" visible="false">
+                           <graphic>
+                              <FontIcon iconLiteral="las-exclamation-circle" styleClass="gusers-field-error" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </GridPane>
+            <TableView fx:id="userTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="597.0" prefWidth="836.0" style="-fx-background-insets: -1;" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <columns>
+                <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="N&quot;" visible="false" />
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="132.00000762939453" text="Nom d'utilisation" />
+                <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="98.0" text="Nom" />
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="91.0" text="Prénom" />
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="138.0" sortable="false" text="Adresse" />
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="116.0" sortable="false" text="Telephone" />
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="79.0" text="Role" />
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="115.66668701171875" sortable="false" text="Mot de passe" />
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="64.0" sortable="false" />
+              </columns>
+            </TableView>
+         </children>
+      </GridPane>
+    </children>
+</VBox>
