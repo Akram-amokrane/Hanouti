@@ -1,45 +1,54 @@
 package dz.hanouti.Model;
 
-public abstract class User {
-    private int idUser;
-    private String user_name;
-    private String firstName;
-    private String lastName;
-    private String Phone;
-    private String adress;
-    private String password;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 
-    public User(int id,String user_name,String fname,String lname,String phone,String adress,String password){
-         this.idUser = id;
-         this.user_name = user_name ;
-         this.firstName = fname;
-         this.lastName = lname;
-         this.Phone = phone;
-         this.adress = adress;
-         this.password = password;
+public abstract class User {
+    private SimpleIntegerProperty idUser;
+    private SimpleStringProperty userName;
+    private SimpleStringProperty firstName;
+    private SimpleStringProperty lastName;
+    private SimpleStringProperty Phone;
+    private SimpleStringProperty adress;
+    private SimpleStringProperty password;
+    private SimpleStringProperty role;
+
+    public User(int id, String userName, String fname, String lname, String phone, String adress, String password, String role){
+         this.idUser = new SimpleIntegerProperty(id);
+         this.userName = new SimpleStringProperty(userName) ;
+         this.firstName = new SimpleStringProperty(fname);
+         this.lastName = new SimpleStringProperty(lname);
+         this.Phone = new SimpleStringProperty(phone);
+         this.adress = new SimpleStringProperty(adress);
+         this.password = new SimpleStringProperty(password);
+         this.role = new SimpleStringProperty(role);
     }
 
     public int getUserId(){
-        return this.idUser;
+        return this.idUser.get();
     };
     public String getUserName(){
-        return this.user_name;
+        return this.userName.get();
     };
     public String getFirstName(){
-        return this.firstName;
+        return this.firstName.get();
     };
     public String getLastName(){
-        return this.lastName;
+        return this.lastName.get();
     };
     public String getPhone(){
-        return this.Phone;
+        return this.Phone.get();
     };
     public String getAdress(){
-        return this.adress;
+        return this.adress.get();
     };
-    public String getPwd(){
-        return this.password;
+    public String getPassword(){
+        return this.password.get();
     };
+    public String getRole(){
+        return this.role.get();
+    };
+
 
 
 }

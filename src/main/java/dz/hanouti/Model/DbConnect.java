@@ -1,5 +1,8 @@
 package dz.hanouti.Model;
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+
 import java.sql.*;
 
 import java.util.Properties;
@@ -45,7 +48,7 @@ public class DbConnect {
             }
             catch (ClassNotFoundException | SQLException e)
             {
-                e.printStackTrace();
+                new Alert(Alert.AlertType.ERROR,e.getMessage(), ButtonType.CANCEL).show();
             }
         }
         return connection;

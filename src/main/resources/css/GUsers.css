@@ -62,18 +62,50 @@
     -fx-text-fill: -fx-v;
     -fx-fill:-fx-v;
 }
-
-.gusers-table{
-    -fx-background-color: #fff;
+.delete-btn{
+    -fx-background-color: rgba(255,60,60,0.2);
+    -fx-text-fill: #f44;
+    -fx-fill:#f44;
 }
+.refresh-btn{
+    -fx-background-color: rgba(60,60,60,0.2);
+    -fx-text-fill: #666;
+    -fx-fill:#666;
+}
+
+.table-view{
+    -fx-background-color: #fff;
+    -fx-table-cell-border-color: transparent;
+    -fx-border-color: transparent;
+    -fx-selection-bar: -fx-primary;
+    -fx-selection-bar-non-focused: rgba(15,133,245,0.2);
+}
+.table-row-cell {
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+}
+.table-row-cell:selected .label{
+    -fx-background-color: -fx-grey;
+    -fx-text-fill: -fx-primary;
+
+}
+
 .table-column {
     -fx-background-color: #fff;
+    -fx-padding: 0;
     -fx-font-size: 12;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+
+    -fx-background-insets: 0.0;
 }
 .table-column .label {
+    -fx-background-insets: 0.0;
+    -fx-padding: 5 0 0 0;
     -fx-text-alignment: left;
     -fx-alignment: center-left;
     -fx-text-fill: -fx-grey;
+    -fx-background-color: #fff;
 }
 .gusers-column >.label{
     -fx-text-alignment: left;
