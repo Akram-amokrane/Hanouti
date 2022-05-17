@@ -152,7 +152,7 @@ public class GUsersController extends WindowBarController {
             if(userRoleM.isSelected()){
                 Admin.insertNewManager((Manager) getUserInfos());
             }else{
-                Admin.insertNewCaissier((Caissier) getUserInfos());
+                Admin.insertNewCaissier((Cashier) getUserInfos());
             }
             initFields();
             loadUsers();
@@ -218,7 +218,7 @@ public class GUsersController extends WindowBarController {
                                 rs.getString("password")
                         ));
                     } else {
-                        usersList.add(new Caissier(
+                        usersList.add(new Cashier(
                                 rs.getInt("idUser"),
                                 rs.getString("user_name"),
                                 rs.getString("first_name"),
@@ -257,7 +257,7 @@ public class GUsersController extends WindowBarController {
                     userPwd.getText().trim()
             );
         }else{
-            u = new Caissier(
+            u = new Cashier(
                     userId.getText().isEmpty()?0:Integer.parseInt(userId.getText()),
                     user_name.getText().trim(),
                     userLastName.getText().trim(),
@@ -361,7 +361,7 @@ public class GUsersController extends WindowBarController {
                             rs.getString("password")
                     ));
                 } else {
-                    usersList.add(new Caissier(
+                    usersList.add(new Cashier(
                             rs.getInt("idUser"),
                             rs.getString("user_name"),
                             rs.getString("first_name"),

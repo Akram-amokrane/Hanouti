@@ -25,7 +25,7 @@ public class Admin extends User {
         }
     }
 
-    public static void insertNewCaissier(Caissier c) {
+    public static void insertNewCaissier(Cashier c) {
         try {
             String query = "INSERT into utilisateur( user_name, first_name, last_name, password, phone, adresse, Role) VALUE (?,?,?,?,?,?,'C')";
             PreparedStatement stmt = DbConnect.connect().prepareStatement(query);
